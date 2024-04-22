@@ -69,8 +69,8 @@ public class Main {
             String op0 = input.substring(0, operation_sign_position);
             String op1 = input.substring(operation_sign_position + 1);
 
-            int iOp0 = 0;
-            int iOp1 = 0;
+            int iOp0;
+            int iOp1;
 
             if(isRoman){
                 iOp0 = convertToArab(op0.replace(" ", ""));
@@ -85,7 +85,7 @@ public class Main {
             if(iOp0 > 10 || iOp1 > 10) throw new IllegalArgumentException(
                     "Один из веденных операторов имеет значение >10");
 
-            int tmpResult = 0;
+            int tmpResult;
 
             switch (operation_sign){
                 case '+':{
